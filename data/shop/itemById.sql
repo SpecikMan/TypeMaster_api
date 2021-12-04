@@ -1,0 +1,1 @@
+select * from Shop where idItem = @idItem

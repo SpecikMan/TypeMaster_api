@@ -1,0 +1,28 @@
+INSERT INTO [dbo].[Level]
+    (
+     [idLevel]
+      ,[nameLevel]
+      ,[numLike]
+      ,[createDate]
+      ,[updatedDate]
+      ,[levelContent]
+      ,[totalWords]
+      ,[time]
+      ,[idDifficulty]
+      ,[idMode]
+      ,[idPublisher]
+    )
+VALUES 
+    (
+        @idLevel,
+        @nameLevel,
+        @numLike,
+        @createDate,
+        @updatedDate,
+        @levelContent,
+        @totalWords,
+        @time,
+        @idDifficulty,
+        @idMode,
+        @idPublisher
+    )

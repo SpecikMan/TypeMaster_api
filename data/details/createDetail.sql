@@ -1,0 +1,32 @@
+INSERT INTO [dbo].[AccountLevelDetails]
+    (
+      [idLevelDetails],
+      [idAccount],
+      [idLevel],
+      [score],
+      [timeLeft],
+      [datePlayed],
+      [isLike],
+      [wpm],
+      [wps],
+      [correct],
+      [wrong],
+      [accuracy],
+      [chartData]
+    )
+VALUES 
+    (
+        @idLevelDetails,
+        @idAccount,
+        @idLevel,
+        @score,
+        @timeLeft,
+        @datePlayed,
+        @isLike,
+        @wpm,
+        @wps,
+        @correct,
+        @wrong,
+        @accuracy,
+        @chartData
+    )

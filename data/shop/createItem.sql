@@ -1,0 +1,24 @@
+INSERT INTO [dbo].[Shop]
+    (
+    [idItem]
+      ,[itemName]
+      ,[description]
+      ,[cost]
+      ,[maxLimit]
+      ,[imagePath]
+      ,[timeUsed]
+      ,[tips]
+      ,[effectsBy]
+    )
+VALUES 
+    (
+        @idItem,
+        @itemName,
+        @description,
+        @cost,
+        @maxLimit,
+        @imagePath,
+        @timeUsed,
+        @tips,
+        @effectsBy
+    )
