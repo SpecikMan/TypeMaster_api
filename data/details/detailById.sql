@@ -10,6 +10,7 @@ SELECT
       [Account].[levelCap],
       [Account].[levelExp],
       [Account].[idRole],
+      [Account].[idRank],
       [AccountLevelDetails].[idLevelDetails],
       [AccountLevelDetails].[idAccount],
       [AccountLevelDetails].[idLevel],
