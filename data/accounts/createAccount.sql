@@ -39,6 +39,6 @@ VALUES
         @accountLevel,
         @levelCap,
         @levelExp,
-        @idRole
+        @idRole,
         @idRank
     )
