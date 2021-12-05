@@ -10,7 +10,15 @@ const getAllGroups = async(req, res, next) => {
         res.status(400).send(error.message);
     }
 }
-
+const getGroupByRank = async(req, res, next) => {
+    try {
+        const accountId = req.params.id;
+        const accountlist = await accountData.getGroupByRank(accountId);
+        res.send(accountlist);
+    } catch (error) {
+        res.status(400).send(error.message);
+    }
+}
 const getGroup = async(req, res, next) => {
     try {
         const accountId = req.params.id;
@@ -57,5 +65,6 @@ module.exports = {
     getGroup,
     addGroup,
     updateGroup,
-    deleteGroup
+    deleteGroup,
+    getGroupByRank
 }

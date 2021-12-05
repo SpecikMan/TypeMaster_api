@@ -21,4 +21,4 @@ select
 [Group].[totalScore]
 from [dbo].[Group],[dbo].[Rank],[dbo].[RankingLevel],[dbo].[Account]
 where [Group].[idRank] = [Rank].[idRank] and [Group].[idRankingLevel] = [RankingLevel].[idRankingLevel] and [Account].[idAccount] = [Group].[idAccount]
-and [Group].idGroup = @idGroup
+and [Group].[idRank] = @idRank

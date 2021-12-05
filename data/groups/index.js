@@ -13,7 +13,16 @@ const getAllGroups = async() => {
         console.log(error.message);
     }
 }
-
+const getGroupByRank = async(idRank) => {
+    try {
+        let pool = await sql.connect(config.sql);
+        const sqlQueries = await utils.loadSqlQueries('groups');
+        const diffsList = await pool.request().input('idRank', sql.VarChar(20), idRank).query(sqlQueries.groupByRank);
+        return diffsList.recordset;
+    } catch (error) {
+        console.log(error.message);
+    }
+}
 const getById = async(diffId) => {
     try {
         let pool = await sql.connect(config.sql);
@@ -91,5 +100,6 @@ module.exports = {
     getById,
     createGroup,
     updateGroup,
-    deleteGroup
+    deleteGroup,
+    getGroupByRank
 }
