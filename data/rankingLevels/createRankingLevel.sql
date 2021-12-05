@@ -5,7 +5,8 @@ INSERT INTO [dbo].[RankingLevel]
         [fromRankPeriod],
         [toRankPeriod],
         [levelContent1],
-        [levelContent2]
+        [levelContent2],
+        [levelContent3]
     )
 VALUES 
     (
@@ -14,5 +15,6 @@ VALUES
         @fromRankPeriod,
         @toRankPeriod,
         @levelContent1,
-        @levelContent2
+        @levelContent2,
+        @levelContent3
     )

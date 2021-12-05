@@ -36,8 +36,9 @@ const createRankingLevel = async(data) => {
             .input('createDate', sql.Date, data.createDate)
             .input('fromRankPeriod', sql.Date, data.fromRankPeriod)
             .input('toRankPeriod', sql.Date, data.toRankPeriod)
-            .input('levelContent1', sql.NVarChar(sql.MAX), data.createDate)
-            .input('levelContent2', sql.NVarChar(sql.MAX), data.createDate)
+            .input('levelContent1', sql.NVarChar(sql.MAX), data.levelContent1)
+            .input('levelContent2', sql.NVarChar(sql.MAX), data.levelContent2)
+            .input('levelContent3', sql.NVarChar(sql.MAX), data.levelContent3)
             .query(sqlQueries.createRankingLevel);
         return insertDiff.recordset;
     } catch (error) {
@@ -54,8 +55,9 @@ const updateRankingLevel = async(idDiff, data) => {
             .input('createDate', sql.Date, data.createDate)
             .input('fromRankPeriod', sql.Date, data.fromRankPeriod)
             .input('toRankPeriod', sql.Date, data.toRankPeriod)
-            .input('levelContent1', sql.NVarChar(sql.MAX), data.createDate)
-            .input('levelContent2', sql.NVarChar(sql.MAX), data.createDate)
+            .input('levelContent1', sql.NVarChar(sql.MAX), data.levelContent1)
+            .input('levelContent2', sql.NVarChar(sql.MAX), data.levelContent2)
+            .input('levelContent3', sql.NVarChar(sql.MAX), data.levelContent3)
             .query(sqlQueries.updateRankingLevel);
         return update.recordset;
     } catch (error) {
