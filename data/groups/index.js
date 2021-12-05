@@ -36,6 +36,12 @@ const createGroup = async(data) => {
             .input('idRank', sql.VarChar(20), data.idRank)
             .input('idAccount', sql.VarChar(20), data.idAccount)
             .input('idRankingLevel', sql.VarChar(20), data.idRankingLevel)
+            .input('score1', sql.BigInt, data.score1)
+            .input('score2', sql.BigInt, data.score2)
+            .input('score3', sql.BigInt, data.score3)
+            .input('datePlayed1', sql.Date, data.datePlayed1)
+            .input('datePlayed2', sql.Date, data.datePlayed2)
+            .input('datePlayed3', sql.Date, data.datePlayed3)
             .input('totalScore', sql.BigInt, data.totalScore)
             .query(sqlQueries.createGroup);
         return insertDiff.recordset;
@@ -53,6 +59,12 @@ const updateGroup = async(idDiff, data) => {
             .input('idRank', sql.VarChar(20), data.idRank)
             .input('idAccount', sql.VarChar(20), data.idAccount)
             .input('idRankingLevel', sql.VarChar(20), data.idRankingLevel)
+            .input('score1', sql.BigInt, data.score1)
+            .input('score2', sql.BigInt, data.score2)
+            .input('score3', sql.BigInt, data.score3)
+            .input('datePlayed1', sql.Date, data.datePlayed1)
+            .input('datePlayed2', sql.Date, data.datePlayed2)
+            .input('datePlayed3', sql.Date, data.datePlayed3)
             .input('totalScore', sql.BigInt, data.totalScore)
             .query(sqlQueries.updateGroup);
         return update.recordset;

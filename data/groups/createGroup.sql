@@ -4,6 +4,12 @@ INSERT INTO [dbo].[Group]
         [idRank],
         [idAccount],
         [idRankingLevel],
+        [score1],
+        [score2],
+        [score3],
+        [datePlayed1],
+        [datePlayed2],
+        [datePlayed3],
         [totalScore]
     )
 VALUES 
@@ -12,5 +18,11 @@ VALUES
         @idRank,
         @idAccount,
         @idRankingLevel,
+        @score1,
+        @score2,
+        @score3,
+        @datePlayed1,
+        @datePlayed2,
+        @datePlayed3,
         @totalScore
     )

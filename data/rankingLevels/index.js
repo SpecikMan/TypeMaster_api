@@ -39,6 +39,9 @@ const createRankingLevel = async(data) => {
             .input('levelContent1', sql.NVarChar(sql.MAX), data.levelContent1)
             .input('levelContent2', sql.NVarChar(sql.MAX), data.levelContent2)
             .input('levelContent3', sql.NVarChar(sql.MAX), data.levelContent3)
+            .input('time1', sql.NVarChar(10), data.time1)
+            .input('time2', sql.NVarChar(10), data.time2)
+            .input('time3', sql.NVarChar(10), data.time3)
             .query(sqlQueries.createRankingLevel);
         return insertDiff.recordset;
     } catch (error) {
@@ -58,6 +61,9 @@ const updateRankingLevel = async(idDiff, data) => {
             .input('levelContent1', sql.NVarChar(sql.MAX), data.levelContent1)
             .input('levelContent2', sql.NVarChar(sql.MAX), data.levelContent2)
             .input('levelContent3', sql.NVarChar(sql.MAX), data.levelContent3)
+            .input('time1', sql.NVarChar(10), data.time1)
+            .input('time2', sql.NVarChar(10), data.time2)
+            .input('time3', sql.NVarChar(10), data.time3)
             .query(sqlQueries.updateRankingLevel);
         return update.recordset;
     } catch (error) {
