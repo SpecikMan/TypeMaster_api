@@ -10,4 +10,4 @@ SET
 [datePlayed2] = @datePlayed2,
 [datePlayed3] = @datePlayed3,
 [totalScore] = @totalScore
-WHERE [idGroup]=@idGroup
+WHERE [idGroup]=@idGroup and [Group].idAccount = @idAccount
