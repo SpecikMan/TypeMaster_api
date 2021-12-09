@@ -82,12 +82,13 @@ const updateGroup = async(idDiff, data) => {
     }
 }
 
-const deleteGroup = async(idDiff) => {
+const deleteGroup = async(groupId, accountId) => {
     try {
         let pool = await sql.connect(config.sql);
         const sqlQueries = await utils.loadSqlQueries('groups');
         const deleteDiff = await pool.request()
-            .input('idGroup', sql.VarChar(20), idDiff)
+            .input('idGroup', sql.VarChar(20), groupId)
+            .input('idAccount', sql.VarChar(20), accountId)
             .query(sqlQueries.deleteGroup);
         return deleteDiff.recordset;
     } catch (error) {

@@ -9,7 +9,7 @@ router.get('/groups/:id', iController.getGroupByRank);
 router.get('/group/:id', iController.getGroup);
 router.post('/group', iController.addGroup);
 router.put('/group/:id', iController.updateGroup);
-router.delete('/group/:id', iController.deleteGroup);
+router.delete('/group/:idGroup/:idAccount', iController.deleteGroup);
 
 
 module.exports = {

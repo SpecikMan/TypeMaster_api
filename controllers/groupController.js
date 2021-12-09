@@ -52,8 +52,9 @@ const updateGroup = async(req, res, next) => {
 
 const deleteGroup = async(req, res, next) => {
     try {
-        const accountId = req.params.id;
-        const deletedAccount = await accountData.deleteGroup(accountId);
+        const accountId = req.params.idAccount;
+        const groupId = req.params.idGroup;
+        const deletedAccount = await accountData.deleteGroup(groupId, accountId);
         res.send(deletedAccount);
     } catch (error) {
         res.status(400).send(error.message);

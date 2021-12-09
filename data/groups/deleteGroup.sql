@@ -1,3 +1,3 @@
 DELETE [dbo].[Group]
-WHERE [idGroup]=@idGroup
+WHERE [idGroup]=@idGroup and [idAccount] = @idAccount
 
