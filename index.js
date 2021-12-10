@@ -14,6 +14,7 @@ const levelRoutes = require('./routes/levelRoutes')
 const shopRoutes = require('./routes/shopRoutes')
 const rankingRoutes = require('./routes/rankingLevelsRoutes')
 const groupRoutes = require('./routes/groupRoutes')
+const fbRoutes = require('./routes/feedbackRoutes')
 const app = express();
 
 app.use(express.json());
@@ -21,7 +22,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 app.use('/api', roleRoutes.routes, accountRoutes.routes, logRoutes.routes, detailRoutes.routes, diffRoutes.routes, modeRoutes.routes,
-    inventoryRoutes.routes, levelRoutes.routes, shopRoutes.routes, rankingRoutes.routes, groupRoutes.routes);
+    inventoryRoutes.routes, levelRoutes.routes, shopRoutes.routes, rankingRoutes.routes, groupRoutes.routes, fbRoutes.routes);
 
 
 

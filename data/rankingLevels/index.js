@@ -76,7 +76,7 @@ const deleteRankingLevel = async(idDiff) => {
         let pool = await sql.connect(config.sql);
         const sqlQueries = await utils.loadSqlQueries('rankingLevels');
         const deleteDiff = await pool.request()
-            .input('idDifficulty', sql.VarChar(20), idDiff)
+            .input('idRankingLevel', sql.VarChar(20), idDiff)
             .query(sqlQueries.deleteRankingLevel);
         return deleteDiff.recordset;
     } catch (error) {
